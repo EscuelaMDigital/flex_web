@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web con flex</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#">
+                <img src="assets/logo.svg" class="logo-img" alt="Logo de la empresa">
+            </a>
+
+            <div class="nav-links">
+                <a href="#categorias">Categorías</a>
+                <a href="#productos">Productos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="etiqueta">EQUIPAMIENTO DEPORTIVO</span>
+                <h1>Muévete.<br><span>Supera tus límites.</span></h1>
+                <p>
+                    Equipamiento seleccionado para acompañarte desde tu
+                    primer entrenamiento hasta tu próximo gran reto.
+                </p>
+                <a href="#productos" class="boton">Descubrir colección</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/running.jpeg" alt="Personas corriendo al aire libre">
+            </div>
+        </section>
+
+        <!-- CATEGORIAS -->
+        <section id="categorias" class="seccion">
+            <div class="seccion-cabecera">
+                <div>
+                    <span class="etiqueta">ENCUENTRA TU EQUIPO</span>
+                    <h2>Muévete a tu manera</h2>
+                </div>
+                <p>Todo lo que necesitas para seguir avanzando.</p>
+            </div>
+
+            <div class="categorias">
+                <a href="#productos" class="categoria">
+                    <span class="categoria-numero">01</span>
+
+                    <div class="categoria-descripcion">
+                        <h3>Running</h3>
+                        <p>Zapatillas y accesorios</p>
+                    </div>
+
+                    <span class="flecha">→</span>
+                </a>
+
+                <a href="#productos" class="categoria">
+                    <span class="categoria-numero">02</span>
+                    <div class="categoria-descripcion">
+                        <h3>Ciclismo</h3>
+                        <p>Todo sobre ruedas</p>
+                    </div>
+                    <span class="flecha">→</span>
+                </a>
+
+                <a href="#productos" class="categoria">
+                    <span class="categoria-numero">03</span>
+                    <div class="categoria-descripcion">
+                        <h3>Outdoor</h3>
+                        <p>Prepárate para salir</p>
+                    </div>
+                    <span class="flecha">→</span>
+                </a>
+
+                <a href="#productos" class="categoria">
+                    <span class="categoria-numero">04</span>
+                    <div class="categoria-descripcion">
+                        <h3>Entrenamiento</h3>
+                        <p>Entrena más y mejor</p>
+                    </div>
+                    <span class="flecha">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="seccion">
+            <div class="seccion-cabecera">
+                <div>
+                    <span class="etiqueta">SELECCIÓN NORTH</span>
+                    <h2>Productos destacados</h2>
+                </div>
+                <a href="#" class="enlace">Ver todos →</a>
+            </div>
+
+            <div class="productos">
+
+                <article class="producto">
+                    <div class="producto-imagen">
+                        <span class="producto-tag">NUEVO</span>
+                        <img src="assets/zapatilla.jpg" alt="Zapatilla deportiva roja" width="900" height="600">
+                    </div>
+
+                    <div class="producto-info">
+                        <div class="producto-titulo">
+                            <h3>Trail</h3>
+                            <p>89,90€</p>
+                        </div>
+                        <p class="producto-nombre">Zapatilla de trail</p>
+                        <a href="#" class="producto-boton">Ver producto</a>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <div class="producto-imagen">
+                        <span class="producto-tag">TOP VENTAS</span>
+                        <img src="assets/mochila.jpg" alt="Mochila deportiva" width="900" height="1350">
+                    </div>
+
+                    <div class="producto-info">
+                        <div class="producto-titulo">
+                            <h3>Alpine 20</h3>
+                            <p>64,90€</p>
+                        </div>
+                        <p class="producto-nombre">Mochila técnica 20L</p>
+                        <a href="#" class="producto-boton">Ver producto</a>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <div class="producto-imagen">
+                        <span class="producto-tag">NUEVO</span>
+                        <img src="assets/chaqueta.webp" alt="Chequeta deportiva" width="1200" height="1800">
+                    </div>
+
+                    <div class="producto-info">
+                        <div class="producto-titulo">
+                            <h3>Storm Pro</h3>
+                            <p>119,90€</p>
+                        </div>
+                        <p class="producto-nombre">Chaqueta impermeable</p>
+                        <a href="#" class="producto-boton">Ver producto</a>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <div class="producto-imagen">
+                        <span class="producto-tag">-20%</span>
+                        <img src="assets/coreSet.jpg" alt="Persona entrenando" width="900" height="600">
+                    </div>
+
+                    <div class="producto-info">
+                        <div class="producto-titulo">
+                            <h3>Core Set</h3>
+                            <p>49,90€</p>
+                        </div>
+                        <p class="producto-nombre">Kit de entrenamiento</p>
+                        <a href="#" class="producto-boton">Ver producto</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- OFERTA -->
+        <section class="oferta">
+            <div class="oferta-contenido">
+                <span class="etiqueta">OFERTA ESPECIAL</span>
+                <h2>Weekend Outdoor</h2>
+                <p>
+                    Equípate para tu próxima escapada. Selección outdoor
+                    con hasta un 30% de descuento.
+                </p>
+                <a href="#productos" class="boton boton-claro">Ver ofertas</a>
+            </div>
+
+            <div class="oferta-descuento">
+                <span>HASTA</span>
+                <strong>-30%</strong>
+                <span>EN SELECCIÓN OUTDOOR</span>
+            </div>
+        </section>
+
+        <!-- DEPORTES -->
+        <section class="seccion">
+            <div class="seccion-cabecera">
+                <div>
+                    <span class="etiqueta">ENCUENTRA TU MOTIVACIÓN</span>
+                    <h2>¿Qué te mueve?</h2>
+                </div>
+            </div>
+
+            <div class="deportes">
+                <a href="#" class="deporte deporte-running">
+                    <span>01</span>
+                    <strong>Running</strong>
+                    <small>Corre más lejos</small>
+                </a>
+
+                <a href="#" class="deporte deporte-ciclismo">
+                    <span>02</span>
+                    <strong>Ciclismo</strong>
+                    <small>Pedalea sin límites</small>
+                </a>
+
+                <a href="#" class="deporte deporte-outdoor">
+                    <span>03</span>
+                    <strong>Outdoor</strong>
+                    <small>Sal ahí fuera</small>
+                </a>
+
+                <a href="#" class="deporte deporte-training">
+                    <span>04</span>
+                    <strong>Entrenamiento</strong>
+                    <small>Hazlo posible</small>
+                </a>
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section id="nosotros" class="nosotros">
+            <div class="nosotros-imagen">
+                <img src="assets/nosotros.jpg" alt="Persona entrenando en un espacio deportivo">
+            </div>
+
+            <div class="nosotros-contenido">
+                <span class="etiqueta">SOBRE NORTH</span>
+                <h2>El equipo importa.<br>Las ganas, también.</h2>
+                <p>
+                    NORTH nace para quienes entienden el deporte como una
+                    forma de avanzar. Seleccionamos productos que combinan
+                    rendimiento, comodidad y diseño para acompañarte en
+                    cada reto.
+                </p>
+                <p>
+                    No importa si estás empezando o preparando tu próximo
+                    desafío. Lo importante es seguir moviéndote.
+                </p>
+                <a href="#" class="enlace">Conoce nuestra historia →</a>
+            </div>
+        </section>
+
+        <!-- OPINIONES -->
+        <section class="seccion opiniones-seccion">
+            <div class="seccion-cabecera">
+                <div>
+                    <span class="etiqueta">LO DICEN ELLOS</span>
+                    <h2>Experiencias reales</h2>
+                </div>
+            </div>
+
+            <div class="opiniones">
+
+                <article class="opinion">
+                    <div class="cliente">
+                        <div class="avatar">
+                            <img class="img-avatar" src="assets/laura.jpg" alt="foto de perfil de Laura">
+                        </div>
+                        <div class="cliente-descripcion">
+                            <strong>Laura M.</strong>
+                            <span>Corredora amateur</span>
+                        </div>
+                    </div>
+                    <p>
+                        “La Trail X1 ha cambiado completamente mis salidas.
+                        Cómoda desde el primer día y con un agarre increíble.”
+                    </p>
+                    <span class="estrellas">★★★★★</span>
+                </article>
+
+                <article class="opinion">
+                    <div class="cliente">
+                        <div class="avatar">
+                            <img class="img-avatar" src="assets/diego.jpg" alt="foto de perfil de Diego">
+                        </div>
+                        <div class="cliente-descripcion">
+                            <strong>Diego R.</strong>
+                            <span>Aficionado al ciclismo</span>
+                        </div>
+                    </div>
+                    <p>
+                        “La mochila Alpine es justo lo que buscaba. Ligera,
+                        cómoda y con espacio para todo lo necesario.”
+                    </p>
+                    <span class="estrellas">★★★★★</span>
+                </article>
+
+                <article class="opinion">
+                    <div class="cliente">
+                        <div class="avatar">
+                            <img class="img-avatar" src="assets/ana.jpg" alt="foto de perfil de Ana">
+                        </div>
+                        <div class="cliente-descripcion">
+                            <strong>Ana S.</strong>
+                            <span>Entrenamiento funcional</span>
+                        </div>
+                    </div>
+                    <p>
+                        “Me gusta que la selección de productos sea sencilla.
+                        Encuentro rápido lo que necesito y las entregas son rápidas.”
+                    </p>
+                    <span class="estrellas">★★★★★</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" id="contacto">
+            <div>
+                <span class="etiqueta etiqueta-oscura">SIGUIENTE RETO</span>
+                <h2>¿Preparado para moverte?</h2>
+            </div>
+            <a href="#productos" id="boton-cta" class="boton boton-claro">Ver colección</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-principal">
+            <div class="footer-marca">
+                <a href="#">
+                    <img src="assets/logo.svg" class="logo-img" alt="Logo de la empresa">
+                </a>
+                <p>Equipamiento para quienes no paran.</p>
+            </div>
+
+            <div class="footer-columnas">
+                <div class="footer-columna">
+                    <h3>Productos</h3>
+                    <a href="#">Running</a>
+                    <a href="#">Ciclismo</a>
+                    <a href="#">Outdoor</a>
+                    <a href="#">Entrenamiento</a>
+                </div>
+
+                <div class="footer-columna">
+                    <h3>Ayuda</h3>
+                    <a href="#">Envíos</a>
+                    <a href="#">Devoluciones</a>
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Contacto</a>
+                </div>
+
+                <div class="footer-columna">
+                    <h3>NORTH</h3>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Nuestra historia</a>
+                    <a href="#">Sostenibilidad</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-final">
+            <span>Todos los derechos reservados.</span>
+            <span>Hecho para moverse.</span>
+        </div>
+    </footer>
+</body>
+
+</html>

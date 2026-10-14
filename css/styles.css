@@ -1,0 +1,787 @@
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --negro: #111111;
+    --negro-suave: #1b1b1b;
+    --blanco: #ffffff;
+    --fondo: #f4f3ef;
+    --gris: #777777;
+    --gris-claro: #e4e2dc;
+    --verde: #b7d638;
+    --verde-oscuro: #849d18;
+    --radio: 4px;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--negro);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CLASES FLEX REUTILIZABLES
+   ========================================================= */
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap {
+    gap: 24px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 14px 28px;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--verde);
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.seccion {
+    margin: 90px 0;
+}
+
+.seccion-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.seccion-cabecera>p {
+    flex: 1 1 250px;
+    max-width: 330px;
+    color: var(--gris);
+}
+
+.seccion h2,
+.nosotros h2,
+.cta h2 {
+    margin-top: 8px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--verde-oscuro);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.etiqueta-clara {
+    color: var(--verde);
+}
+.etiqueta-oscura {
+    color: var(--negro-suave);
+}
+.etiqueta-blanca {
+    color: var(--blanco);
+}
+
+.enlace {
+    font-weight: 800;
+    border-bottom: 2px solid var(--verde);
+    padding-bottom: 4px;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 24px;
+    background: var(--verde);
+    color: var(--negro);
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
+}
+
+#boton-cta:hover {
+    background: var(--negro);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+.boton:hover {
+    background: #c8e54a;
+    transform: translateY(-2px);
+}
+
+.boton-claro {
+    background: var(--blanco);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    background: var(--negro);
+    color: var(--blanco);
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1 1 200px;
+    padding: 60px 40px;
+}
+
+.hero-image {
+    flex: 1 1 300px;
+    align-self: stretch;
+    min-width: 0;
+}
+
+.hero h1 {
+    margin: 14px 0 24px;
+    font-size: clamp(3.2rem, 6vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: var(--verde);
+}
+
+.hero p {
+    max-width: 480px;
+    margin-bottom: 30px;
+    color: #c8c8c8;
+}
+
+.hero-image img {
+    height: 100%;
+    min-height: 500px;
+}
+
+
+/* =========================================================
+   CATEGORÍAS
+   ========================================================= */
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.categoria {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1 1 250px;
+    min-width: 220px;
+    min-height: 130px;
+    padding: 24px;
+    background: var(--blanco);
+    border: 1px solid var(--gris-claro);
+    transition: all 0.3s ease-in-out;
+}
+
+.categoria:hover {
+    flex: 2 1 300px;
+    border-color: var(--verde);
+    filter: drop-shadow(0 0 3px var(--verde));
+}
+
+.categoria-numero {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--verde);
+}
+
+.categoria-descripcion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.categoria h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.categoria p {
+    color: var(--gris);
+    font-size: 0.82rem;
+}
+
+.flecha {
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;
+    min-width: 230px;
+    background: var(--blanco);
+}
+
+.producto-imagen {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #e8e7e2;
+}
+
+.producto-imagen img {
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.producto:hover .producto-imagen img {
+    transform: scale(1.04);
+}
+
+.producto-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 1;
+    padding: 5px 9px;
+    background: var(--verde);
+    color: var(--negro);
+    font-size: 0.65rem;
+    font-weight: 900;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.producto-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.producto-titulo h3 {
+    font-size: 1.1rem;
+}
+
+.producto-titulo strong {
+    white-space: nowrap;
+}
+
+.producto-info>p {
+    margin: 5px 0 18px;
+    color: var(--gris);
+    font-size: 0.82rem;
+}
+
+.producto-boton {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--gris-claro);
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+}
+
+.producto-boton:hover {
+    color: var(--verde-oscuro);
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   OFERTA
+   ========================================================= */
+
+.oferta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin: 90px 0;
+    padding: 50px;
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+.oferta-contenido {
+    flex: 2 1 200px;
+}
+
+.oferta-descuento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 200px;
+    min-height: 230px;
+    padding-left: 30px;
+    border-left: 1px solid #444;
+    text-align: center;
+}
+
+.oferta h2 {
+    margin: 8px 0 16px;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.oferta p {
+    max-width: 520px;
+    margin-bottom: 25px;
+    color: #c8c8c8;
+}
+
+.oferta-descuento span {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.oferta-descuento strong {
+    color: var(--verde);
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 0.95;
+}
+
+
+/* =========================================================
+   DEPORTES
+   ========================================================= */
+
+.deportes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.deporte {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1 1 240px;
+    min-width: 220px;
+    min-height: 260px;
+    padding: 18px 10px;
+    color: var(--blanco);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+.deporte:hover {
+    opacity: 1;
+}
+
+.deporte::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 20%, rgba(0, 0, 0, 0.85));
+}
+
+.deporte>* {
+    position: relative;
+}
+
+.deporte>span {
+    align-self: flex-start;
+    margin-bottom: auto;
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.deporte strong {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.deporte small {
+    color: #ddd;
+}
+
+.deporte-running {
+    background-image:
+        url("../assets/running.jpeg");
+}
+
+.deporte-ciclismo {
+    background-image:
+        url("../assets/ciclismo.jpg");
+}
+
+.deporte-outdoor {
+    background-image:
+        url("../assets/outdoor.jpg");
+}
+
+.deporte-training {
+    background-image:
+        url("../assets/training.jpg");
+}
+
+
+/* =========================================================
+   NOSOTROS
+   ========================================================= */
+
+.nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px;
+    margin: 90px 0;
+}
+
+.nosotros:hover {
+    cursor: pointer;
+}
+
+.nosotros-imagen {
+    flex: 1 1 400px;
+}
+
+.nosotros-contenido {
+    flex: 1 1 400px;
+}
+
+.nosotros-imagen img {
+    min-height: 500px;
+    height: 100%;
+    filter: sepia(0.9);
+    transition: all 0.4s ease-in-out;
+}
+.nosotros:hover .nosotros-imagen img {
+    filter: sepia(0);
+}
+
+.nosotros-contenido p {
+    margin: 22px 0 0;
+    color: var(--gris);
+}
+
+.nosotros-contenido .enlace {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   OPINIONES
+   ========================================================= */
+
+.opiniones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.opinion {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    min-width: 250px;
+    padding: 28px;
+    background: var(--blanco);
+    border: 1px solid var(--gris-claro);
+    transition: all 0.3s ease-in-out;
+}
+
+.opinion:hover {
+    cursor: pointer;
+    border: 1px solid var(--verde);
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 3px var(--verde));
+}
+
+.cliente {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--negro);
+    color: var(--verde);
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.img-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.opinion:hover .img-avatar {
+    height: 65px;
+    border-radius: 0;
+}
+
+.cliente-descripcion {
+    display: flex;
+    flex-direction: column;
+}
+
+.cliente span {
+    color: var(--gris);
+    font-size: 0.75rem;
+}
+
+.opinion p {
+    flex: 1;
+    margin: 25px 0;
+    font-size: 0.95rem;
+}
+
+.estrellas {
+    color: var(--verde-oscuro);
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 90px 0 0;
+    padding: 55px 60px;
+    background: var(--verde);
+}
+
+.cta h2 {
+    color: var(--negro);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-marca {
+    flex: 1;
+}
+
+.footer-marca p {
+    max-width: 250px;
+    margin-top: 14px;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.footer-columnas {
+    flex: 3;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-columna {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-columna h3 {
+    margin-bottom: 7px;
+    color: var(--verde);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.footer-columna a {
+    color: #aaa;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-columna a:hover {
+    color: var(--blanco);
+}
+
+.footer-final {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #777;
+    font-size: 0.75rem;
+    color: #666;
+}
